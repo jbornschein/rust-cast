@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["ChannelMessage","Supported channel message types."]],"mod":[["channels",""],["errors",""],["message_manager",""]],"struct":[["CastDevice","Structure that manages connection to a cast device."]]});

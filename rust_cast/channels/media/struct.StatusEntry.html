@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `StatusEntry` struct in crate `rust_cast`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, StatusEntry">
+
+    <title>rust_cast::channels::media::StatusEntry - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../../index.html'>rust_cast</a>::<wbr><a href='../index.html'>channels</a>::<wbr><a href='index.html'>media</a></p><script>window.sidebarCurrent = {name: 'StatusEntry', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../../index.html'>rust_cast</a>::<wbr><a href='../index.html'>channels</a>::<wbr><a href='index.html'>media</a>::<wbr><a class="struct" href=''>StatusEntry</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../../src/rust_cast/channels/media.rs.html#191-222' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct StatusEntry {
+    pub media_session_id: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
+    pub media: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../../rust_cast/channels/media/struct.Media.html" title="struct rust_cast::channels::media::Media">Media</a>&gt;,
+    pub playback_rate: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.f32.html">f32</a>,
+    pub player_state: <a class="enum" href="../../../rust_cast/channels/media/enum.PlayerState.html" title="enum rust_cast::channels::media::PlayerState">PlayerState</a>,
+    pub idle_reason: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="enum" href="../../../rust_cast/channels/media/enum.IdleReason.html" title="enum rust_cast::channels::media::IdleReason">IdleReason</a>&gt;,
+    pub current_time: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.f32.html">f32</a>&gt;,
+    pub supported_media_commands: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a>,
+}</pre><div class='docblock'><p>Detailed status of the media artifact with respect to the session.</p>
+</div><h2 class='fields'>Fields</h2><span id='structfield.media_session_id' class="structfield">
+                           <span id='media_session_id.v' class='invisible'>
+                           <code>media_session_id: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></code>
+                           </span></span><div class='docblock'><p>Unique ID for the playback of this specific session. This ID is set by the receiver at LOAD
+and can be used to identify a specific instance of a playback. For example, two playbacks of
+&quot;Wish you were here&quot; within the same session would each have a unique mediaSessionId.</p>
+</div><span id='structfield.media' class="structfield">
+                           <span id='media.v' class='invisible'>
+                           <code>media: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../../rust_cast/channels/media/struct.Media.html" title="struct rust_cast::channels::media::Media">Media</a>&gt;</code>
+                           </span></span><div class='docblock'><p>Full description of the content that is being played back. Only be returned in a status
+messages if the Media has changed.</p>
+</div><span id='structfield.playback_rate' class="structfield">
+                           <span id='playback_rate.v' class='invisible'>
+                           <code>playback_rate: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.f32.html">f32</a></code>
+                           </span></span><div class='docblock'><p>Indicates whether the media time is progressing, and at what rate. This is independent of
+the player state since the media time can stop in any state. 1.0 is regular time, 0.5 is
+slow motion.</p>
+</div><span id='structfield.player_state' class="structfield">
+                           <span id='player_state.v' class='invisible'>
+                           <code>player_state: <a class="enum" href="../../../rust_cast/channels/media/enum.PlayerState.html" title="enum rust_cast::channels::media::PlayerState">PlayerState</a></code>
+                           </span></span><div class='docblock'><p>Describes the state of the player.</p>
+</div><span id='structfield.idle_reason' class="structfield">
+                           <span id='idle_reason.v' class='invisible'>
+                           <code>idle_reason: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="enum" href="../../../rust_cast/channels/media/enum.IdleReason.html" title="enum rust_cast::channels::media::IdleReason">IdleReason</a>&gt;</code>
+                           </span></span><div class='docblock'><p>If the player_state is IDLE and the reason it became IDLE is known, this property is
+provided. If the player is IDLE because it just started, this property will not be provided.
+If the player is in any other state this property should not be provided.</p>
+</div><span id='structfield.current_time' class="structfield">
+                           <span id='current_time.v' class='invisible'>
+                           <code>current_time: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.f32.html">f32</a>&gt;</code>
+                           </span></span><div class='docblock'><p>The current position of the media player since the beginning of the content, in seconds.
+If this a live stream content, then this field represents the time in seconds from the
+beginning of the event that should be known to the player.</p>
+</div><span id='structfield.supported_media_commands' class="structfield">
+                           <span id='supported_media_commands.v' class='invisible'>
+                           <code>supported_media_commands: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a></code>
+                           </span></span><div class='docblock'><p>Flags describing which media commands the media player supports:
+* <code>1</code> <code>Pause</code>;
+* <code>2</code> <code>Seek</code>;
+* <code>4</code> <code>Stream volume</code>;
+* <code>8</code> <code>Stream mute</code>;
+* <code>16</code> <code>Skip forward</code>;
+* <code>32</code> <code>Skip backward</code>.
+Combinations are described as summations; for example, Pause+Seek+StreamVolume+Mute == 15.</p>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html" title="trait core::fmt::Debug">Debug</a> for <a class="struct" href="../../../rust_cast/channels/media/struct.StatusEntry.html" title="struct rust_cast::channels::media::StatusEntry">StatusEntry</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../src/rust_cast/channels/media.rs.html#190' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class="method"><span id='fmt.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class="struct" href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html" title="struct core::fmt::Formatter">Formatter</a>) -&gt; <a class="type" href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html" title="type core::fmt::Result">Result</a></code></span></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../../";
+        window.currentCrate = "rust_cast";
+    </script>
+    <script src="../../../jquery.js"></script>
+    <script src="../../../main.js"></script>
+    <script defer src="../../../search-index.js"></script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `MediaChannel` struct in crate `rust_cast`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, MediaChannel">
+
+    <title>rust_cast::channels::media::MediaChannel - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../../index.html'>rust_cast</a>::<wbr><a href='../index.html'>channels</a>::<wbr><a href='index.html'>media</a></p><script>window.sidebarCurrent = {name: 'MediaChannel', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../../index.html'>rust_cast</a>::<wbr><a href='../index.html'>channels</a>::<wbr><a href='index.html'>media</a>::<wbr><a class="struct" href=''>MediaChannel</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../../src/rust_cast/channels/media.rs.html#273-276' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct MediaChannel&lt;'a, W&gt; <span class="where fmt-newline">where W: <a class="trait" href="https://doc.rust-lang.org/nightly/std/io/trait.Read.html" title="trait std::io::Read">Read</a> + <a class="trait" href="https://doc.rust-lang.org/nightly/std/io/trait.Write.html" title="trait std::io::Write">Write</a></span> { /* fields omitted */ }</pre><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl&lt;'a, W&gt; <a class="struct" href="../../../rust_cast/channels/media/struct.MediaChannel.html" title="struct rust_cast::channels::media::MediaChannel">MediaChannel</a>&lt;'a, W&gt; <span class="where fmt-newline">where W: <a class="trait" href="https://doc.rust-lang.org/nightly/std/io/trait.Read.html" title="trait std::io::Read">Read</a> + <a class="trait" href="https://doc.rust-lang.org/nightly/std/io/trait.Write.html" title="trait std::io::Write">Write</a></span></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../src/rust_cast/channels/media.rs.html#278-706' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.new' class="method"><span id='new.v' class='invisible'><code>fn <a href='#method.new' class='fnname'>new</a>&lt;S&gt;(sender: S,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; message_manager: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/rc/struct.Rc.html" title="struct alloc::rc::Rc">Rc</a>&lt;<a class="struct" href="../../../rust_cast/message_manager/struct.MessageManager.html" title="struct rust_cast::message_manager::MessageManager">MessageManager</a>&lt;W&gt;&gt;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class="struct" href="../../../rust_cast/channels/media/struct.MediaChannel.html" title="struct rust_cast::channels::media::MediaChannel">MediaChannel</a>&lt;'a, W&gt; <span class="where fmt-newline">where S: <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;<a class="enum" href="https://doc.rust-lang.org/nightly/collections/borrow/enum.Cow.html" title="enum collections::borrow::Cow">Cow</a>&lt;'a, <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt;&gt;</span></code></span></h4>
+<h4 id='method.get_status' class="method"><span id='get_status.v' class='invisible'><code>fn <a href='#method.get_status' class='fnname'>get_status</a>&lt;S&gt;(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; destination: S,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; media_session_id: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>&gt;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../../../rust_cast/channels/media/struct.Status.html" title="struct rust_cast::channels::media::Status">Status</a>, <a class="enum" href="../../../rust_cast/errors/enum.Error.html" title="enum rust_cast::errors::Error">Error</a>&gt; <span class="where fmt-newline">where S: <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;<a class="enum" href="https://doc.rust-lang.org/nightly/collections/borrow/enum.Cow.html" title="enum collections::borrow::Cow">Cow</a>&lt;'a, <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt;&gt;</span></code></span></h4>
+<div class='docblock'><p>Retrieves status of the cast device media session.</p>
+
+<h1 id='arguments' class='section-header'><a href='#arguments'>Arguments</a></h1>
+<ul>
+<li><code>destination</code> - <code>protocol</code> identifier of specific app media session;</li>
+<li><code>media_session_id</code> - Media session ID of the media for which the media status should be
+returned. If none is provided, then the status for all media session IDs will be provided.</li>
+</ul>
+
+<h1 id='return-value' class='section-header'><a href='#return-value'>Return value</a></h1>
+<p>Returned <code>Result</code> should consist of either <code>Status</code> instance or an <code>Error</code>.</p>
+</div><h4 id='method.load' class="method"><span id='load.v' class='invisible'><code>fn <a href='#method.load' class='fnname'>load</a>&lt;S&gt;(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; destination: S,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; session_id: S,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; media: <a class="struct" href="../../../rust_cast/channels/media/struct.Media.html" title="struct rust_cast::channels::media::Media">Media</a>)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../../../rust_cast/channels/media/struct.Status.html" title="struct rust_cast::channels::media::Status">Status</a>, <a class="enum" href="../../../rust_cast/errors/enum.Error.html" title="enum rust_cast::errors::Error">Error</a>&gt; <span class="where fmt-newline">where S: <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;<a class="enum" href="https://doc.rust-lang.org/nightly/collections/borrow/enum.Cow.html" title="enum collections::borrow::Cow">Cow</a>&lt;'a, <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt;&gt;</span></code></span></h4>
+<div class='docblock'><p>Loads provided media to the application.</p>
+
+<h1 id='arguments-1' class='section-header'><a href='#arguments-1'>Arguments</a></h1>
+<ul>
+<li><code>destination</code> - <code>protocol</code> of the application to load media with (e.g. <code>web-1</code>);</li>
+<li><code>session_id</code> - Current session identifier of the player application;</li>
+<li><code>media</code> - <code>Media</code> instance that describes the media we&#39;d like to load.</li>
+</ul>
+
+<h1 id='return-value-1' class='section-header'><a href='#return-value-1'>Return value</a></h1>
+<p>Returned <code>Result</code> should consist of either <code>Status</code> instance or an <code>Error</code>.</p>
+</div><h4 id='method.pause' class="method"><span id='pause.v' class='invisible'><code>fn <a href='#method.pause' class='fnname'>pause</a>&lt;S&gt;(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; destination: S,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; media_session_id: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../../../rust_cast/channels/media/struct.StatusEntry.html" title="struct rust_cast::channels::media::StatusEntry">StatusEntry</a>, <a class="enum" href="../../../rust_cast/errors/enum.Error.html" title="enum rust_cast::errors::Error">Error</a>&gt; <span class="where fmt-newline">where S: <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;<a class="enum" href="https://doc.rust-lang.org/nightly/collections/borrow/enum.Cow.html" title="enum collections::borrow::Cow">Cow</a>&lt;'a, <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt;&gt;</span></code></span></h4>
+<div class='docblock'><p>Pauses playback of the current content. Triggers a STATUS event notification to all sender
+applications.</p>
+
+<h1 id='arguments-2' class='section-header'><a href='#arguments-2'>Arguments</a></h1>
+<ul>
+<li><code>destination</code> - <code>protocol</code> of the media application (e.g. <code>web-1</code>);</li>
+<li><code>media_session_id</code> - ID of the media session to be paused.</li>
+</ul>
+
+<h1 id='return-value-2' class='section-header'><a href='#return-value-2'>Return value</a></h1>
+<p>Returned <code>Result</code> should consist of either <code>Status</code> instance or an <code>Error</code>.</p>
+</div><h4 id='method.play' class="method"><span id='play.v' class='invisible'><code>fn <a href='#method.play' class='fnname'>play</a>&lt;S&gt;(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; destination: S,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; media_session_id: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../../../rust_cast/channels/media/struct.StatusEntry.html" title="struct rust_cast::channels::media::StatusEntry">StatusEntry</a>, <a class="enum" href="../../../rust_cast/errors/enum.Error.html" title="enum rust_cast::errors::Error">Error</a>&gt; <span class="where fmt-newline">where S: <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;<a class="enum" href="https://doc.rust-lang.org/nightly/collections/borrow/enum.Cow.html" title="enum collections::borrow::Cow">Cow</a>&lt;'a, <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt;&gt;</span></code></span></h4>
+<div class='docblock'><p>Begins playback of the content that was loaded with the load call, playback is continued
+from the current time position.</p>
+
+<h1 id='arguments-3' class='section-header'><a href='#arguments-3'>Arguments</a></h1>
+<ul>
+<li><code>destination</code> - <code>protocol</code> of the media application (e.g. <code>web-1</code>);</li>
+<li><code>media_session_id</code> - ID of the media session to be played.</li>
+</ul>
+
+<h1 id='return-value-3' class='section-header'><a href='#return-value-3'>Return value</a></h1>
+<p>Returned <code>Result</code> should consist of either <code>Status</code> instance or an <code>Error</code>.</p>
+</div><h4 id='method.stop' class="method"><span id='stop.v' class='invisible'><code>fn <a href='#method.stop' class='fnname'>stop</a>&lt;S&gt;(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; destination: S,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; media_session_id: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../../../rust_cast/channels/media/struct.StatusEntry.html" title="struct rust_cast::channels::media::StatusEntry">StatusEntry</a>, <a class="enum" href="../../../rust_cast/errors/enum.Error.html" title="enum rust_cast::errors::Error">Error</a>&gt; <span class="where fmt-newline">where S: <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;<a class="enum" href="https://doc.rust-lang.org/nightly/collections/borrow/enum.Cow.html" title="enum collections::borrow::Cow">Cow</a>&lt;'a, <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt;&gt;</span></code></span></h4>
+<div class='docblock'><p>Stops playback of the current content. Triggers a STATUS event notification to all sender
+applications. After this command the content will no longer be loaded and the
+media_session_id is invalidated.</p>
+
+<h1 id='arguments-4' class='section-header'><a href='#arguments-4'>Arguments</a></h1>
+<ul>
+<li><code>destination</code> - <code>protocol</code> of the media application (e.g. <code>web-1</code>);</li>
+<li><code>media_session_id</code> - ID of the media session to be stopped.</li>
+</ul>
+
+<h1 id='return-value-4' class='section-header'><a href='#return-value-4'>Return value</a></h1>
+<p>Returned <code>Result</code> should consist of either <code>Status</code> instance or an <code>Error</code>.</p>
+</div><h4 id='method.seek' class="method"><span id='seek.v' class='invisible'><code>fn <a href='#method.seek' class='fnname'>seek</a>&lt;S&gt;(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; destination: S,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; media_session_id: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; current_time: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.f32.html">f32</a>&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; resume_state: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="enum" href="../../../rust_cast/channels/media/enum.ResumeState.html" title="enum rust_cast::channels::media::ResumeState">ResumeState</a>&gt;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../../../rust_cast/channels/media/struct.StatusEntry.html" title="struct rust_cast::channels::media::StatusEntry">StatusEntry</a>, <a class="enum" href="../../../rust_cast/errors/enum.Error.html" title="enum rust_cast::errors::Error">Error</a>&gt; <span class="where fmt-newline">where S: <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;<a class="enum" href="https://doc.rust-lang.org/nightly/collections/borrow/enum.Cow.html" title="enum collections::borrow::Cow">Cow</a>&lt;'a, <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>&gt;&gt;</span></code></span></h4>
+<div class='docblock'><p>Sets the current position in the stream. Triggers a STATUS event notification to all sender
+applications. If the position provided is outside the range of valid positions for the
+current content, then the player should pick a valid position as close to the requested
+position as possible.</p>
+
+<h1 id='arguments-5' class='section-header'><a href='#arguments-5'>Arguments</a></h1>
+<ul>
+<li><code>destination</code> - <code>protocol</code> of the media application (e.g. <code>web-1</code>);</li>
+<li><code>media_session_id</code> - ID of the media session to seek in;</li>
+<li><code>current_time</code> - Time in seconds to seek to.</li>
+</ul>
+
+<h1 id='return-value-5' class='section-header'><a href='#return-value-5'>Return value</a></h1>
+<p>Returned <code>Result</code> should consist of either <code>Status</code> instance or an <code>Error</code>.</p>
+</div><h4 id='method.can_handle' class="method"><span id='can_handle.v' class='invisible'><code>fn <a href='#method.can_handle' class='fnname'>can_handle</a>(&amp;self, message: &amp;<a class="struct" href="../../../rust_cast/message_manager/struct.CastMessage.html" title="struct rust_cast::message_manager::CastMessage">CastMessage</a>) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span></h4>
+<h4 id='method.parse' class="method"><span id='parse.v' class='invisible'><code>fn <a href='#method.parse' class='fnname'>parse</a>(&amp;self, message: &amp;<a class="struct" href="../../../rust_cast/message_manager/struct.CastMessage.html" title="struct rust_cast::message_manager::CastMessage">CastMessage</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="enum" href="../../../rust_cast/channels/media/enum.MediaResponse.html" title="enum rust_cast::channels::media::MediaResponse">MediaResponse</a>, <a class="enum" href="../../../rust_cast/errors/enum.Error.html" title="enum rust_cast::errors::Error">Error</a>&gt;</code></span></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../../";
+        window.currentCrate = "rust_cast";
+    </script>
+    <script src="../../../jquery.js"></script>
+    <script src="../../../main.js"></script>
+    <script defer src="../../../search-index.js"></script>
+</body>
+</html>

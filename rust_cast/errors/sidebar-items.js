@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["Error","Consolidates possible error types that can occur in the lib."],["SslError","Consolidates possible error types that can occur in the OpenSSL lib."]]});

@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["CastMessagePayload","Type of the payload that `CastMessage` can have."]],"struct":[["CastMessage","Base structure that represents messages that are exchanged between Receiver and Sender."],["MessageManager","Static structure that is responsible for (de)serializing and sending/receiving Cast protocol messages."]]});
