@@ -1,7 +1,5 @@
 (function() {var implementors = {};
-implementors["libc"] = [];
-implementors["openssl"] = [];
-implementors["serde"] = [];
+implementors["protobuf"] = [{text:"impl&lt;'a&gt; <a class=\"trait\" href=\"https://doc.rust-lang.org/nightly/std/io/trait.BufRead.html\" title=\"trait std::io::BufRead\">BufRead</a> for <a class=\"struct\" href=\"protobuf/stream/struct.CodedInputStream.html\" title=\"struct protobuf::stream::CodedInputStream\">CodedInputStream</a>&lt;'a&gt;",synthetic:false,types:["protobuf::stream::CodedInputStream"]},];
 
             if (window.register_implementors) {
                 window.register_implementors(implementors);
